@@ -1,0 +1,134 @@
+.app {
+  display: flex;
+  height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e1e1e;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  padding: 8px;
+  width: 250px;
+  border-radius: 4px;
+  border: none;
+}
+
+.dark-toggle {
+  color: #ccc;
+  font-size: 14px;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #1e1e1e;
+  padding: 20px;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.sidebar h2 {
+  margin-bottom: 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 8px 0;
+  cursor: pointer;
+  color: #ccc;
+}
+
+.sidebar li:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.book-card {
+  background-color: #2b2b2b;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.book-card:hover {
+  transform: scale(1.03);
+}
+
+.book-card img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.book-card h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.book-card p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.book-card .genre {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.book-card small {
+  font-size: 12px;
+  color: #666;
+}
+
+.button-container {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.buy-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+  background-color: #e68900;
+}
