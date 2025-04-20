@@ -1,4 +1,6 @@
+import React from "react";
 import BookCard from "./BookCard";
+import books from "../data/books";
 
 const BookGrid = ({ books }) => {
   return (

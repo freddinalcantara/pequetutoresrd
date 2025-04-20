@@ -15,7 +15,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #1e1e1e;
+  background-color: #182e49;
   padding: 10px 20px;
   border-radius: 8px;
   margin-bottom: 20px;
@@ -29,20 +29,30 @@
 }
 
 .dark-toggle {
-  color: #ccc;
+  color: #fff;
   font-size: 14px;
 }
 
 .sidebar {
-  width: 200px;
-  background-color: #1e1e1e;
+  width: 147px;
+  background-color: #182e49;
   padding: 20px;
   height: 100vh;
   box-sizing: border-box;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.sidebar-image {
+  margin-top: 20px;
+  width: 100%;
+  border-radius: 12px;
 }
 
 .sidebar h2 {
   margin-bottom: 10px;
+  color: #fff;
 }
 
 .sidebar ul {
@@ -53,11 +63,11 @@
 .sidebar li {
   margin: 8px 0;
   cursor: pointer;
-  color: #ccc;
+  color: #fff;
 }
 
 .sidebar li:hover {
-  color: white;
+  color: #fff;
   text-decoration: underline;
 }
 
@@ -68,7 +78,7 @@
 }
 
 .book-card {
-  background-color: #2b2b2b;
+  background-color: #f5f5dc;
   padding: 15px;
   border-radius: 10px;
   text-align: center;
@@ -76,6 +86,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border: 2px solid #ccc;
 }
 
 .book-card:hover {
@@ -96,18 +107,18 @@
 .book-card p {
   margin: 4px 0;
   font-size: 14px;
-  color: #aaa;
+  color: #fff;
 }
 
 .book-card .genre {
   font-size: 12px;
-  color: #666;
+  color: #fff;
   margin-bottom: 10px;
 }
 
 .book-card small {
   font-size: 12px;
-  color: #666;
+  color: #000;
 }
 
 .button-container {
@@ -123,7 +134,7 @@
   background-color: #ff9800;
   color: white;
   border: none;
-  border-radius: 6px;
+  border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s ease;
