@@ -2,7 +2,12 @@ import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import BookGrid from "./components/BookGrid";
+import Contact from "./components/Contact";
 import books from "./data/books";
+import Footer from "./components/Footer";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import PrivacyPolicy from "./components/PrivacyPolicy";
 import "./App.css";
 
 function App() {
@@ -18,16 +23,26 @@ function App() {
     : books;
 
   return (
-    <div className="app">
-      <Sidebar onSelectGenre={setSelectedGenre} isOpen={sidebarOpen} />
-      <div className="main-content">
-        <button className="hamburger-button" onClick={toggleSidebar}>
-          ☰
-        </button>
-        <Navbar />
-        <BookGrid books={filteredBooks} />
+    <Router>
+      <div className="app">
+        <Sidebar onSelectGenre={setSelectedGenre} isOpen={sidebarOpen} />
+        <div className="main-content">
+          <button className="hamburger-button" onClick={toggleSidebar}>
+            ☰
+          </button>
+          <Navbar />
+          {/* <BookGrid books={filteredBooks} /> */}
+
+          <Routes>
+            <Route path="/" element={<BookGrid books={filteredBooks} />} />
+            <Route path="/privacidad" element={<PrivacyPolicy />} />
+            <Route path="/contacto" element={<Contact />} />
+          </Routes>
+
+          <Footer />
+        </div>
       </div>
-    </div>
+    </Router>
   );
 }
 
