@@ -41,7 +41,7 @@ function App() {
             <Route path="/contacto" element={<Contact />} />
           </Routes>
 
-          {/* <AdBanner /> */}
+          <AdBanner />
           <Footer />
         </div>
       </div>

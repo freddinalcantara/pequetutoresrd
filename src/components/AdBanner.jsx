@@ -2,11 +2,15 @@ import { useEffect } from "react";
 
 const AdBanner = () => {
   useEffect(() => {
-    try {
-      (window.adsbygoogle = window.adsbygoogle || []).push({});
-    } catch (e) {
-      console.error("Adsense error", e);
-    }
+    const timeout = setTimeout(() => {
+      try {
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+      } catch (e) {
+        console.error("Adsense error", e);
+      }
+    }, 500); // Pequeña espera para asegurar que el DOM se monte
+
+    return () => clearTimeout(timeout);
   }, []);
 
   return (
