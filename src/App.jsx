@@ -7,6 +7,42 @@ import "./App.css";
 
 function App() {
   const [selectedGenre, setSelectedGenre] = useState(null);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
+
+  const filteredBooks = selectedGenre
+    ? books.filter((book) => book.genre === selectedGenre)
+    : books;
+
+  return (
+    <div className="app">
+      <Sidebar onSelectGenre={setSelectedGenre} isOpen={sidebarOpen} />
+      <div className="main-content">
+        <button className="hamburger-button" onClick={toggleSidebar}>
+          ☰
+        </button>
+        <Navbar />
+        <BookGrid books={filteredBooks} />
+      </div>
+    </div>
+  );
+}
+
+export default App;
+
+/*
+import { useState } from "react";
+import Navbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
+import BookGrid from "./components/BookGrid";
+import books from "./data/books";
+import "./App.css";
+
+function App() {
+  const [selectedGenre, setSelectedGenre] = useState(null);
 
   const filteredBooks = selectedGenre
     ? books.filter((book) => book.genre === selectedGenre)
@@ -24,3 +60,6 @@ function App() {
 }
 
 export default App;
+
+
+*/
