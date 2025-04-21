@@ -5,6 +5,8 @@ import BookGrid from "./components/BookGrid";
 import Contact from "./components/Contact";
 import books from "./data/books";
 import Footer from "./components/Footer";
+import { AdSense } from "react-adsense";
+import AdBanner from "./components/AdBanner";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import PrivacyPolicy from "./components/PrivacyPolicy";
@@ -39,6 +41,7 @@ function App() {
             <Route path="/contacto" element={<Contact />} />
           </Routes>
 
+          <AdBanner />
           <Footer />
         </div>
       </div>
