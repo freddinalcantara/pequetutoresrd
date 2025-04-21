@@ -6,8 +6,9 @@ const Footer = () => {
     <footer
       className="text-center py-6 mt-10"
       style={{
-        backgroundColor: "#fcefe8", // color pastel suave
+        // color pastel suave
         borderTop: "4px solid #182e49",
+        marginTop: "100px",
       }}
     >
       {/* <div className="text-lg text-[#182e49] font-semibold mb-3">
